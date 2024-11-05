@@ -2,11 +2,9 @@ local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
 orgs.newOrg('eclipse-efbt') {
   settings+: {
-
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
-      default_workflow_permissions: "read",
     },
   },
   webhooks+: [
@@ -32,9 +30,6 @@ orgs.newOrg('eclipse-efbt') {
       description: "efbt",
       has_discussions: true,
       web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "read",
-      },
     },
     orgs.newRepo('efbt-website') {
       allow_merge_commit: true,
