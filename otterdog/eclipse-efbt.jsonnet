@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-efbt') {
+orgs.newOrg('technology.efbt', 'eclipse-efbt') {
   settings+: {
     web_commit_signoff_required: false,
     workflows+: {
